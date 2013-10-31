@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		379247F117ADA4B500597746 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379247F017ADA4B500597746 /* CoreFoundation.framework */; };
 		379247F717ADA4B500597746 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 379247F517ADA4B500597746 /* InfoPlist.strings */; };
+		379247FF17ADA4D100597746 /* GTWSWBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379247FE17ADA4D100597746 /* GTWSWBase.framework */; };
+		3792480217ADA4F800597746 /* GTWSPARQLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3792480117ADA4F800597746 /* GTWSPARQLProtocol.m */; };
+		3792480417ADA50100597746 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3792480317ADA50100597746 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +20,10 @@
 		379247F417ADA4B500597746 /* GTWSPARQLProtocolStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GTWSPARQLProtocolStore-Info.plist"; sourceTree = "<group>"; };
 		379247F617ADA4B500597746 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		379247F817ADA4B500597746 /* GTWSPARQLProtocolStore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTWSPARQLProtocolStore-Prefix.pch"; sourceTree = "<group>"; };
+		379247FE17ADA4D100597746 /* GTWSWBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTWSWBase.framework; path = ../../../../../Library/Frameworks/GTWSWBase.framework; sourceTree = "<group>"; };
+		3792480017ADA4F800597746 /* GTWSPARQLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTWSPARQLProtocol.h; sourceTree = "<group>"; };
+		3792480117ADA4F800597746 /* GTWSPARQLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTWSPARQLProtocol.m; sourceTree = "<group>"; };
+		3792480317ADA50100597746 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,7 +31,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3792480417ADA50100597746 /* libxml2.dylib in Frameworks */,
 				379247F117ADA4B500597746 /* CoreFoundation.framework in Frameworks */,
+				379247FF17ADA4D100597746 /* GTWSWBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +43,7 @@
 		379247E417ADA4B500597746 = {
 			isa = PBXGroup;
 			children = (
+				3792480317ADA50100597746 /* libxml2.dylib */,
 				379247F217ADA4B500597746 /* GTWSPARQLProtocolStore */,
 				379247EF17ADA4B500597746 /* Frameworks */,
 				379247EE17ADA4B500597746 /* Products */,
@@ -51,6 +61,7 @@
 		379247EF17ADA4B500597746 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				379247FE17ADA4D100597746 /* GTWSWBase.framework */,
 				379247F017ADA4B500597746 /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
@@ -59,6 +70,8 @@
 		379247F217ADA4B500597746 /* GTWSPARQLProtocolStore */ = {
 			isa = PBXGroup;
 			children = (
+				3792480017ADA4F800597746 /* GTWSPARQLProtocol.h */,
+				3792480117ADA4F800597746 /* GTWSPARQLProtocol.m */,
 				379247F317ADA4B500597746 /* Supporting Files */,
 			);
 			path = GTWSPARQLProtocolStore;
@@ -136,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3792480217ADA4F800597746 /* GTWSPARQLProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,8 +230,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GTWSPARQLProtocolStore/GTWSPARQLProtocolStore-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "GTWSPARQLProtocolStore/GTWSPARQLProtocolStore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -229,8 +248,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GTWSPARQLProtocolStore/GTWSPARQLProtocolStore-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "GTWSPARQLProtocolStore/GTWSPARQLProtocolStore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -257,6 +281,7 @@
 				379247FD17ADA4B500597746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
