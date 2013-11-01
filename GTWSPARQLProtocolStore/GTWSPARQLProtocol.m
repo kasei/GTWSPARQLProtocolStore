@@ -22,6 +22,10 @@ static NSString* OSVersionNumber ( void ) {
     return @"{ \"endpoint\": <URL of SPARQL endpoint> }";
 }
 
++ (NSSet*) implementedProtocols {
+    return [NSSet setWithObjects:@protocol(GTWTripleStore), nil];
+}
+
 - (instancetype) initWithDictionary: (NSDictionary*) dictionary {
     return [self initWithEndpoint:dictionary[@"endpoint"]];
 }
