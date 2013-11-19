@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3700DDD2183B147200AF79C7 /* SPARQLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3700DDD1183B147200AF79C7 /* SPARQLKit.framework */; };
 		379247F117ADA4B500597746 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379247F017ADA4B500597746 /* CoreFoundation.framework */; };
 		379247F717ADA4B500597746 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 379247F517ADA4B500597746 /* InfoPlist.strings */; };
 		379247FF17ADA4D100597746 /* GTWSWBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379247FE17ADA4D100597746 /* GTWSWBase.framework */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3700DDD1183B147200AF79C7 /* SPARQLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SPARQLKit.framework; path = ../../../../../Library/Frameworks/SPARQLKit.framework; sourceTree = "<group>"; };
 		379247ED17ADA4B500597746 /* GTWSPARQLProtocolStore.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTWSPARQLProtocolStore.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		379247F017ADA4B500597746 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		379247F417ADA4B500597746 /* GTWSPARQLProtocolStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GTWSPARQLProtocolStore-Info.plist"; sourceTree = "<group>"; };
@@ -33,6 +35,7 @@
 			files = (
 				3792480417ADA50100597746 /* libxml2.dylib in Frameworks */,
 				379247F117ADA4B500597746 /* CoreFoundation.framework in Frameworks */,
+				3700DDD2183B147200AF79C7 /* SPARQLKit.framework in Frameworks */,
 				379247FF17ADA4D100597746 /* GTWSWBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +64,7 @@
 		379247EF17ADA4B500597746 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3700DDD1183B147200AF79C7 /* SPARQLKit.framework */,
 				379247FE17ADA4D100597746 /* GTWSWBase.framework */,
 				379247F017ADA4B500597746 /* CoreFoundation.framework */,
 			);
@@ -232,7 +236,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../Library/Frameworks\"",
+					"\\\"$(SRCROOT)/../../../../../Library/Frameworks\\\"",
+					"$(USER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GTWSPARQLProtocolStore/GTWSPARQLProtocolStore-Prefix.pch";
@@ -250,7 +255,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../Library/Frameworks\"",
+					"\\\"$(SRCROOT)/../../../../../Library/Frameworks\\\"",
+					"$(USER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GTWSPARQLProtocolStore/GTWSPARQLProtocolStore-Prefix.pch";
