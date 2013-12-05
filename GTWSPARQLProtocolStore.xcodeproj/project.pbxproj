@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		3700DDD1183B147200AF79C7 /* SPARQLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SPARQLKit.framework; path = ../../../../../Library/Frameworks/SPARQLKit.framework; sourceTree = "<group>"; };
-		379247ED17ADA4B500597746 /* GTWSPARQLProtocolStore.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTWSPARQLProtocolStore.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		379247ED17ADA4B500597746 /* GTWSPARQLProtocolStore.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTWSPARQLProtocolStore.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		379247F017ADA4B500597746 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		379247F417ADA4B500597746 /* GTWSPARQLProtocolStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GTWSPARQLProtocolStore-Info.plist"; sourceTree = "<group>"; };
 		379247F617ADA4B500597746 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		379247EE17ADA4B500597746 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				379247ED17ADA4B500597746 /* GTWSPARQLProtocolStore.bundle */,
+				379247ED17ADA4B500597746 /* GTWSPARQLProtocolStore.plugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,7 +108,7 @@
 			);
 			name = GTWSPARQLProtocolStore;
 			productName = GTWSPARQLProtocolStore;
-			productReference = 379247ED17ADA4B500597746 /* GTWSPARQLProtocolStore.bundle */;
+			productReference = 379247ED17ADA4B500597746 /* GTWSPARQLProtocolStore.plugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -234,6 +234,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\\\"$(SRCROOT)/../../../../../Library/Frameworks\\\"",
@@ -243,9 +245,9 @@
 				GCC_PREFIX_HEADER = "GTWSPARQLProtocolStore/GTWSPARQLProtocolStore-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "GTWSPARQLProtocolStore/GTWSPARQLProtocolStore-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Application Support/SPARQLKit/PlugIns";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = plugin;
 			};
 			name = Debug;
 		};
@@ -253,6 +255,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\\\"$(SRCROOT)/../../../../../Library/Frameworks\\\"",
@@ -262,9 +266,9 @@
 				GCC_PREFIX_HEADER = "GTWSPARQLProtocolStore/GTWSPARQLProtocolStore-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "GTWSPARQLProtocolStore/GTWSPARQLProtocolStore-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Application Support/SPARQLKit/PlugIns";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = plugin;
 			};
 			name = Release;
 		};
